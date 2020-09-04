@@ -226,3 +226,46 @@
         }
     }
 }
+
+#worker{
+    .worker-item{
+        .worker-img{
+            overflow: hidden;
+            img{
+                transition: .3s;
+            }
+        }
+        &:hover{
+            .worker-img{
+                img{
+                    transform: scale(1.2);
+                }
+            }
+            .worker-info{
+                top: 0;
+                color: #fff;
+                &::after{
+                    top: 0;
+                    opacity: 1;
+                }
+            }
+        }
+        .worker-info{
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            &::after{
+                transition: .3s;
+                z-index: -1;
+                content: '';
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                top: 100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, #5192e1 0%, #23ced5 100%, #5192e1 100%);;
+            }
+        }
+    }
+}

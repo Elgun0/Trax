@@ -254,4 +254,49 @@
 #plan .concept li .fp {
   font-weight: 500;
 }
+
+#worker .worker-item .worker-img {
+  overflow: hidden;
+}
+
+#worker .worker-item .worker-img img {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#worker .worker-item:hover .worker-img img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#worker .worker-item:hover .worker-info {
+  top: 0;
+  color: #fff;
+}
+
+#worker .worker-item:hover .worker-info::after {
+  top: 0;
+  opacity: 1;
+}
+
+#worker .worker-item .worker-info {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#worker .worker-item .worker-info::after {
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(100%, #23ced5), to(#5192e1));
+  background: linear-gradient(to right, #5192e1 0%, #23ced5 100%, #5192e1 100%);
+}
 /*# sourceMappingURL=style.css.map */
